@@ -1,10 +1,18 @@
 // QandAのToggle menu===========================
 $('.qa__item_question').on('click', function () {
     const $item = $(this).closest('.qa__item');
-    $item.toggleClass('open');
-    $item.find('.qa__item_answer').slideToggle(200);
+    const $answer = $item.find('.qa__item_answer');
+    if ($item.hasClass('open')) {
+        $answer.slideUp(200, function () {
+        $item.removeClass('open');
+        });
+    //開いた後にopenクラスをつける
+    } else {
+        $answer.slideDown(200, function () {
+        $item.addClass('open');
+        });
+    }
 });
-
 //slickスライダーの指定==========================
 $(document).ready(function(){
     $('.voices__slider').slick({

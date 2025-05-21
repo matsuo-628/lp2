@@ -73,7 +73,7 @@ li{
     font-family: var(--font__ja);
     font-size: 1.25rem;
     letter-spacing: 0.1rem;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--font__black);
     margin: 0 auto;
     text-align: center;
@@ -451,6 +451,11 @@ li{
     bottom: -30px;
     text-align: center;
 }
+.voices__slider .slick-dots li {
+    margin: 0 2.5px;
+    width: 10px;
+    height: 10px;
+}
 .voices__slider .slick-dots li button:before {
     font-size: 9px;
     color: #eee;
@@ -603,12 +608,13 @@ li{
     position: absolute;
     right: 1em;
     top: 50%;
-    transform: translateY(-50%) rotate(0deg);
+    transform: translateY(-50%);
     width: 0;
     height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
     border-top: 10px solid var(--font__black);
+    border-bottom: 0;
     transition: transform 0.3s ease;
 }
 /*ドロワーのアニメーション*/
@@ -621,7 +627,10 @@ li{
 }
 /* 開いているときは矢印を上に */
 .qa__item.open .qa__item_question::after {
-    transform: translateY(-50%) rotate(180deg);
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 10px solid var(--font__black);
+    border-top: 0;
 }
 /*sp(QandA)====*/
 @media screen and (max-width: 767px){
@@ -630,7 +639,6 @@ li{
     }
     .qa__list{
         width: 100%;
-        padding: 0 1rem;
     }
     .qa__item{
         margin-bottom: 1.25rem;
