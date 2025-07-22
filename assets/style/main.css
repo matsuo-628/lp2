@@ -479,6 +479,12 @@ li{
     display: block;
     height: 190%;
 }
+.voices__img_normal{
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
 .voices__img_right{
     object-fit: cover;
     object-position: top right;

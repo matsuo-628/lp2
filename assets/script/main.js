@@ -21,7 +21,7 @@ $(document).ready(function(){
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToScroll: 1,//スライド数増加。lesson9修正課題による変更
     responsive: [
         {
             breakpoint: 768,
